@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/sim-ware/country-finder/issues"
   },
-  "homepage": "https://github.com/sim-ware/country-finder#readme"
+  "homepage": "https://github.com/sim-ware/country-finder#readme",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
 }
