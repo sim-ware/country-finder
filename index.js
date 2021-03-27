@@ -2,11 +2,9 @@ const axios = require('axios');
 const formatUrl = require('./formatUrl')
 const filterByRegionEurope = require('./filterByRegionEurope')
 
-const rootUrl = 'https://restcountries.eu/rest/v2/name/'
 
-async function requestRestCountriesApi(url) {
+async function axiosGetRequest(url) {
   let data;
-
   try {
     const response = await axios.get(url);
     data = response.data
@@ -19,8 +17,8 @@ async function requestRestCountriesApi(url) {
 
 async function run() {
   const countryNameOrPartial = process.argv.slice(2)
-  const url = formatUrl(rootUrl, countryNameOrPartial)
-  const data = await requestRestCountriesApi(url)
+  const url = formatUrl('https://restcountries.eu/rest/v2/name/', countryNameOrPartial)
+  const data = await axiosGetRequest(url)
   const filteredByEuropeData = filterByRegionEurope(data)
 
   console.log('country name (or partial): ', countryNameOrPartial);
