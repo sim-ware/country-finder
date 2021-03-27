@@ -1,7 +1,8 @@
 const axios = require('axios');
+const formatUrl = require('./formatUrl')
+const filterByRegionEurope = require('./filterByRegionEurope')
 
-var myArgs = process.argv.slice(2);
-console.log('argument of a country name (or partial): ', myArgs);
+const rootUrl = 'https://restcountries.eu/rest/v2/name/'
 
 async function requestRestCountriesApi(url) {
   // Make a request for a user with a given ID
@@ -19,4 +20,14 @@ async function requestRestCountriesApi(url) {
     });
 }
 
-requestRestCountriesApi('https://restcountries.eu/rest/v2/all')
+async function run() {
+  const countryNameOrPartial = process.argv.slice(2)
+  const url = formatUrl(rootUrl, countryNameOrPartial)
+
+  console.log('country name (or partial): ', countryNameOrPartial);
+  console.log('Request URL: ',               url);
+
+  requestRestCountriesApi(url)
+}
+
+run()
