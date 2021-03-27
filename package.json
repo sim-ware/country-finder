@@ -1,0 +1,19 @@
+{
+  "name": "country-finder",
+  "version": "1.0.0",
+  "description": "A simple node.js and HTML/ES6 app to find countries from http://restcountries.eu/",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sim-ware/country-finder.git"
+  },
+  "author": "Sim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sim-ware/country-finder/issues"
+  },
+  "homepage": "https://github.com/sim-ware/country-finder#readme"
+}
