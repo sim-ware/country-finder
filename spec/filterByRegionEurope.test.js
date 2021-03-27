@@ -1,4 +1,4 @@
-const filterByRegionEurope = require('./filterByRegionEurope');
+const filterByRegionEurope = require('../filterByRegionEurope');
 
 test('filters an Array of Objects by those with the key:region value:filter', () => {
   const exampleJson = [
