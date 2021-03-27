@@ -2,7 +2,7 @@
 A simple node.js and HTML/ES6 app to fetch countries from `http://restcountries.eu/`
 
 
-# CheckList
+### CheckList
 * ~~npm init w/ package.json~~
 * ~~install axios~~
 * ~~commit .sh of example curl request 200 to `https://restcountries.eu/rest/v2/all`~~
