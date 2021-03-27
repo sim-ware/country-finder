@@ -8,6 +8,7 @@ A simple node.js and HTML/ES6 app to fetch countries from `http://restcountries.
 * ~~commit .sh of example curl request 200 to `https://restcountries.eu/rest/v2/all`~~
 * ~~install Jest as dev dependency and scaffold simple 'sum' example test~~
 * capture and return curl request in axios
+* create ability to run `index.js` with command line argument
 * create subset of returned data from `test.sh` to test with
 * use example `sum` test to scaffold function that inserts inputString into `https://restcountries.eu/rest/v2/name/{name}`, replacing `{name}`
 * use that test and function to scaffold new function that only returns countries with region value "Europe"
@@ -23,3 +24,6 @@ A simple node.js and HTML/ES6 app to fetch countries from `http://restcountries.
     ...]
 }
 ```
+
+#### TODOS
+* Handle CLI arg - check for only one, is string, otherwise stop and prompt user to run again with correct arg
