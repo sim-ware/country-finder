@@ -1,4 +1,4 @@
-const mapToNameAndCapital = require('../mapToNameAndCapital');
+const utils = require('../utils');
 
 test('filters an Array of Objects by those with the key:region value:"Europe"', () => {
   const exampleJson = [
@@ -12,7 +12,7 @@ test('filters an Array of Objects by those with the key:region value:"Europe"', 
     },
   ]
 
-  expect(mapToNameAndCapital(exampleJson)).toStrictEqual(
+  expect(utils.mapToNameAndCapital(exampleJson)).toStrictEqual(
     [
       {
         countryName: "United Kingdom",

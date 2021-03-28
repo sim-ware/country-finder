@@ -1,4 +1,4 @@
-function reduceToNameAndCapital(countryData) {
+function mapToNameAndCapital(countryData) {
   return countryData.map((country) => {
     return {
       countryName: country.nativeName,
@@ -7,4 +7,4 @@ function reduceToNameAndCapital(countryData) {
   })
 }
 
-module.exports = reduceToNameAndCapital;
+module.exports = mapToNameAndCapital;

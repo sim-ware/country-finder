@@ -106,5 +106,5 @@ dist
 # Package-Lock file
 package-lock.json
 
-# Hefty test.json file
+# Loose test files
 test.json

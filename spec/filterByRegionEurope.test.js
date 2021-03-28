@@ -1,4 +1,4 @@
-const filterByRegionEurope = require('../filterByRegionEurope');
+const utils = require('../utils');
 
 test('filters an Array of Objects by those with the key:region value:"Europe"', () => {
   const exampleJson = [
@@ -10,7 +10,7 @@ test('filters an Array of Objects by those with the key:region value:"Europe"', 
     { region:   "Africa" },
   ]
 
-  expect(filterByRegionEurope(exampleJson)).toStrictEqual(
+  expect(utils.filterByRegionEurope(exampleJson)).toStrictEqual(
     [
       { region:   "Europe" },
       { region:   "Europe" },

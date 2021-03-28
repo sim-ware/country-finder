@@ -1,9 +1,9 @@
-const checkCliArg = require('../checkCliArg');
+const utils = require('../utils');
 
 test('checks the Command Line Argument and Returns False if formatted incorrectly', () => {
-  const checkOne = checkCliArg(['united'])
-  const checkTwo = checkCliArg([2])
-  const checkThree = checkCliArg(['united', 'kingdom'])
+  const checkOne = utils.checkCliArg(['united'])
+  const checkTwo = utils.checkCliArg([2])
+  const checkThree = utils.checkCliArg(['united', 'kingdom'])
   expect(checkOne).toBe(true);
   expect(checkTwo).toBe(false);
   expect(checkThree).toBe(false);

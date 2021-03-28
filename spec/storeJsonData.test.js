@@ -1,11 +1,16 @@
-const storeJsonData = require('../storeJsonData');
+const utils = require('../utils');
+const fs = require('fs')
 
-test('checks the Command Line Argument and Returns False if formatted incorrectly', () => {
-//   const checkOne = checkCliArg(['united'])
-//   const checkTwo = checkCliArg([2])
-//   const checkThree = checkCliArg(['united', 'kingdom'])
-//   expect(checkOne).toBe(true);
-//   expect(checkTwo).toBe(false);
-//   expect(checkThree).toBe(false);
-  storeJsonData({ test: 'test' }, 'test.json')
+const path = 'spec/test.json'
+
+test('checks the JSON is saved to the correct filepath', () => {
+  utils.storeJsonData({ test: 'test' }, path)
+  const test = fs.existsSync(path)
+  const rawdata = fs.readFileSync(path);
+  const testData = JSON.parse(rawdata);
+
+  expect(test).toBe(true);
+  expect(testData).toStrictEqual({ test: 'test' })
+
+  fs.unlinkSync(path)
 });
