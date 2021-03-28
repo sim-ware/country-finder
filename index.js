@@ -1,4 +1,3 @@
-// const axios = require('axios');
 const formatUrl = require('./formatUrl')
 const filterByRegionEurope = require('./filterByRegionEurope')
 const axiosGetRequest = require('./axiosGetRequest')
