@@ -1,19 +1,8 @@
 const axios = require('axios');
 const formatUrl = require('./formatUrl')
 const filterByRegionEurope = require('./filterByRegionEurope')
+const axiosGetRequest = require('./axiosGetRequest')
 
-
-async function axiosGetRequest(url) {
-  let data;
-  try {
-    const response = await axios.get(url);
-    data = response.data
-  } catch (error) {
-    data = error
-  }
-
-  return data
-}
 
 async function run() {
   const countryNameOrPartial = process.argv.slice(2)
