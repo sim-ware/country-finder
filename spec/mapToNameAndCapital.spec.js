@@ -1,4 +1,4 @@
-const reduceToNameAndCapital = require('../reduceToNameAndCapital');
+const mapToNameAndCapital = require('../mapToNameAndCapital');
 
 test('filters an Array of Objects by those with the key:region value:"Europe"', () => {
   const exampleJson = [
@@ -6,13 +6,21 @@ test('filters an Array of Objects by those with the key:region value:"Europe"', 
       nativeName: 'United Kingdom',
       capital: 'London'
     },
+    {
+      nativeName: 'Tattoine',
+      capital: 'Bestine Township'
+    },
   ]
 
-  expect(reduceToNameAndCapital(exampleJson)).toStrictEqual(
+  expect(mapToNameAndCapital(exampleJson)).toStrictEqual(
     [
       {
         countryName: "United Kingdom",
         capitalCity: "London"
+      },
+      {
+        countryName: "Tattoine",
+        capitalCity: "Bestine Township"
       },
     ]
   );

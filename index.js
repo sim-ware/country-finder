@@ -2,6 +2,7 @@ const formatUrl = require('./formatUrl')
 const filterByRegionEurope = require('./filterByRegionEurope')
 const axiosGetRequest = require('./axiosGetRequest')
 const checkCliArg = require('./checkCliArg')
+const mapToNameAndCapital = require('./mapToNameAndCapital')
 
 
 async function run() {
@@ -22,10 +23,13 @@ async function run() {
   }
 
   const filteredByEuropeData = filterByRegionEurope(data)
-  console.log('cliArg: ',               cliArg);
-  console.log('Request URL: ',          url);
-  console.log('data: ',                 data);
-  console.log('filteredByEuropeData: ', filteredByEuropeData);
+  const mappedToNameAndCapital = mapToNameAndCapital(filteredByEuropeData)
+
+  console.log('cliArg: ',                 cliArg);
+  console.log('Request URL: ',            url);
+  console.log('data: ',                   data);
+  console.log('filteredByEuropeData: ',   filteredByEuropeData);
+  console.log('mappedToNameAndCapital: ', mappedToNameAndCapital);
 }
 
 run()
