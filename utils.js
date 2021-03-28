@@ -2,17 +2,17 @@ const axios = require('axios');
 const fs = require('fs')
 
 
-function checkCliArg(cliArg) {
+const checkCliArg = (cliArg) => {
   if (cliArg.length > 1) return false;
   if (typeof cliArg[0] !== 'string') return false;
   return true;
 }
 
-function formatUrl(rootUrl, inputString) {
+const formatUrl = (rootUrl, inputString) => {
   return rootUrl + inputString;
 }
 
-async function axiosGetRequest(url) {
+const axiosGetRequest = async (url) => {
   let data;
   try {
     const response = await axios.get(url);
@@ -24,11 +24,11 @@ async function axiosGetRequest(url) {
   return data
 }
 
-function filterByRegionEurope(countryArray) {
+const filterByRegionEurope = (countryArray) => {
   return countryArray.filter(country => country.region === "Europe")
 }
 
-function mapToNameAndCapital(countryData) {
+const mapToNameAndCapital = (countryData) => {
   return countryData.map((country) => {
     return {
       countryName: country.nativeName,
