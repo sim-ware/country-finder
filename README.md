@@ -29,5 +29,5 @@ A simple node.js and HTML/ES6 app to fetch countries from `http://restcountries.
 * ~~test axios request with error handling~~
 * ~~move spec files into spec folder~~
 * ~~extract `axiosGetRequest` function from index & test~~
-* Handle CLI arg - check for only one, is string, otherwise stop and prompt user to run again with correct arg -> extract all this into a function
+* ~~Handle CLI arg - check for only one, is string, otherwise stop and prompt user to run again with correct arg -> extract all this into a function~~
 * combine the functions into one utils folder
