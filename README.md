@@ -12,7 +12,7 @@ A simple node.js and HTML/ES6 app to fetch countries from `http://restcountries.
 * ~~create subset of returned data from `test.sh` to test with~~
 * ~~use example `sum` test to scaffold function that inserts inputString into `https://restcountries.eu/rest/v2/name/{name}`, replacing `{name}`~~
 * ~~use that test and function to scaffold new function that only returns countries with region value "Europe"~~
-* new test and function to reduce the response to just countryName and capitalCity
+* ~~new test and function to reduce the response to just countryName and capitalCity~~
 * write that to a JSON file, with the filename of the input, e.g. `./united.json`
 ```
 { results: 
