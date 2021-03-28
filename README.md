@@ -31,3 +31,4 @@ A simple node.js and HTML/ES6 app to fetch countries from `http://restcountries.
 * ~~extract `axiosGetRequest` function from index & test~~
 * ~~Handle CLI arg - check for only one, is string, otherwise stop and prompt user to run again with correct arg -> extract all this into a function~~
 * combine the functions into one utils folder
+* when I run with `node index.js test` it trips things up - why?
