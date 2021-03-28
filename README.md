@@ -14,16 +14,10 @@ A simple node.js and HTML/ES6 app to fetch countries from `http://restcountries.
 * ~~use that test and function to scaffold new function that only returns countries with region value "Europe"~~
 * ~~new test and function to reduce the response to just countryName and capitalCity~~
 * ~~write that to a JSON file, with the filename of the input, e.g. `./united.json`~~
-```
-{ results: 
-    [
-        {
-            countryName: "United Kingdom",
-            capitalCity: "London"
-        },
-    ...]
-}
-```
+* create `index.html`
+* create text field and go button
+* on 'go' press, log text field input
+* create dummy UL below
 
 #### TODOS
 * ~~test axios request with error handling~~
